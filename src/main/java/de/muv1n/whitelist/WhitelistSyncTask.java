@@ -35,7 +35,7 @@ public class WhitelistSyncTask extends BukkitRunnable {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(BuildConstants.BACKEND_URL + "api/mc/whitelist"))
+                    .uri(URI.create(BuildConstants.BACKEND_URL + "/api/mc/whitelist"))
                     .header("X-Api-Key", apiKey)
                     .GET()
                     .build();
