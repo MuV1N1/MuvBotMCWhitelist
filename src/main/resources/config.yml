@@ -1,0 +1,3 @@
+api-key: "paste-your-uuid-here"
+sync-interval-seconds: 300
+remove-unlisted: false

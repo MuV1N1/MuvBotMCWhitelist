@@ -1,0 +1,10 @@
+name: whitelist
+prefix: MuvBot Whitelist
+version: '${version}'
+
+main: de.muv1n.whitelist.Whitelist
+api-version: '26.2'
+load: STARTUP
+
+authors: [ muv1n ]
+website: muv1n.de
