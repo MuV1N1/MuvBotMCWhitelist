@@ -19,7 +19,7 @@ public final class Whitelist extends JavaPlugin {
     @Override
     public void onDisable() {
         if (syncTask != null) syncTask.cancel();
-        getLogger().info("MuvWhitelist disabled.");
+        getLogger().info("MuvWhitelist disabled.sadasdad");
     }
 
     public void startSync() {
