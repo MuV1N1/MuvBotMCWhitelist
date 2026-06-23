@@ -10,8 +10,10 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
 }
 
+val mcVersion = "26.2"
+
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:26.2.build.+")
+    compileOnly("io.papermc.paper:paper-api:${mcVersion}.build.+")
 }
 
 java {
@@ -19,11 +21,12 @@ java {
 }
 
 tasks {
+    jar {
+        archiveBaseName.set("whitelist-mc${mcVersion}")
+    }
+
     runServer {
-        // Configure the Minecraft version for our task.
-        // This is the only required configuration besides applying the plugin.
-        // Your plugin's jar (or shadowJar if present) will be used automatically.
-        minecraftVersion("26.2")
+        minecraftVersion(mcVersion)
         jvmArgs("-Xms2G", "-Xmx2G")
     }
 
